@@ -1,0 +1,137 @@
+.tradefaircontainertrade {
+    display: flex;
+  justify-content: center;
+
+  margin-top: 2%;
+  padding: 20px;
+  margin-left: -8%;
+  }
+  
+  .tradefairtrade1 {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    padding: 4%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding-bottom: 8%;
+  }
+  
+  .tradefairtrade1:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tradefairtrade1 img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .tradefairtrade1:hover img {
+    opacity: 0.9;
+  }
+  
+  .tradefairtrade1 .title {
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .tradefairtrade1:hover .title {
+    color: #ff5733;
+  }
+  
+  .tradefairtrade1 .details {
+    margin: 15px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    text-align: justify;
+  }
+  
+  .tradefairtrade1:hover .details {
+    color: #555;
+  }
+  
+  .tradefairtrade1 .date,
+  .tradefairtrade1 .location,
+  .tradefairtrade1 .booth,.trade1 .tradelink
+   {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .tradefairtrade1 .date span,
+  .tradefairtrade1 .location span,
+  .tradefairtrade1 .booth span ,
+  .tradefairtrade1 .tradelink span{
+    color: #ff5733;
+    transition: color 0.3s ease;
+  }
+  
+  .tradefairtrade1:hover .date span,
+  .tradefairtrade1:hover .location span,
+  .tradefairtrade1:hover .booth span,
+  .tradefairtrade1:hover .tradelink span{
+    color: #e63946;
+  }
+
+  .tradefairtradeheading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 18%;
+    font-size: 230%;
+    color: #ff7900;
+    text-align: center;
+    width: 54%;
+  }
+  
+  @media (max-width: 600px) {
+    .tradefairtradeheading {
+        margin-top: 28%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+     
+        
+        margin-left: 22%;
+        font-size: 120%;
+        color: #ff7900;
+        text-align: center;
+        width: 54%;
+    }
+    .tradefairtrade1 {
+      width: 55%;
+      padding: 15px;
+      font-size: 1rem;
+      margin-left: 24%;
+    }
+  
+    .tradefairtrade1 .title {
+      font-size: 1.3em;
+    }
+  
+    .tradefairtrade1 .details,
+    .tradefairtrade1 .date,
+    .tradefairtrade1 .location,
+    .tradefairtrade1 .booth ,
+    .tradefairtrade1 .tradelink{
+      font-size: 0.6rem;
+    }
+}
+
+

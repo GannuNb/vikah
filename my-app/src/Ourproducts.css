@@ -1,0 +1,130 @@
+.ourproductscard-container-home {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 6%;
+    margin-top: 4%;
+    padding: 3%;
+    background-color: white;
+    margin-left: 3%;
+  }
+  
+  .ourproductscard-item-home {
+    position: relative; /* Add this */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 268px;
+    margin: 1%;
+    padding: 0%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden; /* Add this to ensure gradient stays within card */
+  }
+  
+  
+  .ourproductscard-item-home:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .ourproductscard-image-home {
+    width: 80%;
+    height: 48%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 7%;
+    z-index: 2; /* Add this to place image above the gradient */
+  }
+  
+  .ourproductscard-text-home {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3; /* Add this to ensure text is above the gradient */
+  }
+  
+  .ourproductscard-text-home p {
+    margin: 0;
+  }
+  
+  .ourproductscard-item-home:hover {
+    transform: scale(1.1); /* Scale up the card item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
+  
+  .ourproductscard-item-home::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjust height to match the gradient effect */
+    background: linear-gradient(to top, #00ff00, rgba(0, 255, 0, 0)); /* Green gradient */
+    z-index: 1; /* Place the gradient below the image and text */
+  }
+  .ourproductsheading {
+    display: flex;
+    margin-top: 12%;
+    font-size: 230%;
+    margin-left: 33%;
+    color: #ff7900;
+  }
+  @media only screen and (max-width: 600px) {
+    .ourproductscard-container-home {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .ourproductscard-item-home {
+        width: 131px;
+        height: 200px;
+        margin: 4% 2%;
+    }
+  
+    .ourproductscard-image-home {
+        width: 80%;
+        height: 100px; /* Adjust height for images on smaller screens */
+        object-fit: cover;
+        border-radius: 4px;
+    }
+  
+    .ourproductscard-text-home {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #333;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3; /* Ensure the text appears above the gradient */
+    }
+  
+    .ourproductscard-item-home::after {
+        height: 50%; /* Adjust the height for smaller screens */
+    }
+    .ourproductsheading {
+        display: flex;
+        margin-top: 24%;
+        font-size: 120%;
+        margin-left: 33%;
+        color: #ff7900;
+      }
+  }

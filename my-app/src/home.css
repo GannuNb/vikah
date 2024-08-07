@@ -1,0 +1,600 @@
+.homecontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.hometopcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    padding: 3% 8%;
+    background-color: white;
+    margin-top: 6%;
+    margin-left: 0;
+}
+
+.homecarousel {
+  width: 30%;
+  margin-top: 11%;
+  margin-right: 21%;
+  max-height: 295px;
+  overflow: hidden;
+  margin-left: 5%;
+}
+
+.homecarouselimg {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px !important; /* Ensure images fit within the container */
+  object-fit: cover !important; /* Cover the area while maintaining aspect ratio */
+  border-radius: 5px !important; /* Apply border radius */
+}
+.homecarouselimg2 {
+  width: 100% !important;
+  height: 300px !important;
+  max-height: 300px !important; /* Ensure images fit within the container */
+  object-fit: cover !important; /* Cover the area while maintaining aspect ratio */
+  border-radius: 10px !important; /* Apply border radius */
+}
+
+.legend {
+    font-size: 0.8em; /* Decrease legend size */
+}
+
+.your {
+    font-size: 1.8em;
+    margin: 1% 0 0%; 
+    font-weight: bold;
+    width:200%;
+    color: #000000e7;
+    
+}
+
+.in-sustainable-recycling {
+    color: black;
+    font-weight: normal;
+}
+
+.solu {
+    font-size: 1.9em;
+    color: #000;
+    margin: 5% 0 2% 0; 
+    font-weight: bold;
+    text-align: left;
+    margin-top: 3%;
+    margin-left: 31%;
+    animation: colorChange 3s infinite;
+}
+@keyframes colorChange {
+  0% {
+    color: #FF7900; /* Starting color */
+  }
+  70% {
+    color: #007bff; /* Intermediate color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow halfway */
+  }
+  100% {
+    color: #6fff00; /* Return to starting color */
+  }
+  100% {
+    color: #e0e717; /* Return to starting color */
+  }
+  }
+
+
+.at-vikah-ecotech {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 3%; 
+    line-height: 1.6;
+    width: 123%;
+    text-align: justify;
+}
+ .at-vikah-ecotech:hover {
+  animation: none; 
+  color: #007bff; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+@media only screen and (max-width: 600px) {
+    .homecontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hometopcontainer {
+        width: 62%;
+        padding: 5%;
+        margin-top: 33%;
+        margin-right: 12%;
+    }
+
+      .homecarousel {
+        width: 60%;
+        margin-top: 12%;
+        margin-right: 26px;
+        height: 265px;
+    }
+    .homecarouselimg2 {
+      width: 100% !important;
+      height: 200px !important;
+      max-height: 300px !important; /* Ensure images fit within the container */
+      object-fit: cover !important; /* Cover the area while maintaining aspect ratio */
+      border-radius: 10px !important; /* Apply border radius */
+    }
+    
+
+    .your {
+        font-size: 94%;
+        margin: 3% 0px;
+        width: 148%;
+    }
+
+    .solu {
+        font-size: 1em;
+        margin: 3% 28%;
+    }
+
+    .at-vikah-ecotech {
+        font-size: 64%;
+        margin-top: 2%;
+        font-size: 0.9em;
+    }
+}
+
+
+@media (max-width: 1024px) {
+  .homecarousel {
+    width: 40%;
+    margin-top: 30%;
+    margin-right: 12%;
+    max-height: 300px;
+    height: auto;
+}
+.hometopcontainer {
+  width: 62%;
+  padding: 5%;
+  margin-top: 18%;
+  margin-right: 12%;
+}
+
+}
+
+
+/* @media only screen and (max-width: 1000px) and (min-width: 816px) {
+
+
+  .homecarousel {
+      width: 40%;
+      margin-top: 30%;
+      margin-right: 12%;
+      max-height: 300px;
+      height: auto;
+  }
+  .hometopcontainer {
+    width: 62%;
+    padding: 5%;
+    margin-top: 12%;
+    margin-right: 12%;
+}
+} */
+
+/* @media only screen and (max-width: 900px) {
+
+  .homecarousel {
+    width: 35%;
+    margin-top: 22%;
+    margin-right: 26px;
+    height: 245px;
+}
+
+} */
+
+
+.homeproducts {
+    display: flex;
+    margin-top: 9%;
+    font-size: 230%;
+    margin-left: 33%;
+    color: #ff7900;
+  
+}
+@media (max-width: 600px) {
+    .homeproducts{
+
+    margin-top: 6%;
+    margin-left: 38%;
+    font-size: 124%;
+    color: #ff7900;
+    text-align: center;
+    width: 35%;
+
+    }
+
+}
+
+.card-container-home {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 6%;
+  margin-top: 4%;
+  padding: 3%;
+  background-color: white;
+  margin-left: 3%;
+}
+
+.card-item-home {
+  position: relative; /* Add this */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  height: 268px;
+  margin: 1%;
+  padding: 0%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden; /* Add this to ensure gradient stays within card */
+}
+
+
+.card-item-home:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image-home {
+  width: 80%;
+  height: 48%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 7%;
+  z-index: 2; /* Add this to place image above the gradient */
+}
+
+.card-text-home {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: auto;
+  margin-bottom: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* Add this to ensure text is above the gradient */
+}
+
+.card-text-home p {
+  margin: 0;
+}
+
+.card-item-home:hover {
+  transform: scale(1.1); /* Scale up the card item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.card-item-home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Adjust height to match the gradient effect */
+  background: linear-gradient(to top, #00ff00, rgba(0, 255, 0, 0)); /* Green gradient */
+  z-index: 1; /* Place the gradient below the image and text */
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container-home {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .card-item-home {
+      width: 131px;
+      height: 200px;
+      margin: 4% 2%;
+  }
+
+  .card-image-home {
+      width: 80%;
+      height: 100px; /* Adjust height for images on smaller screens */
+      object-fit: cover;
+      border-radius: 4px;
+  }
+
+  .card-text-home {
+      font-size: 0.8em;
+      font-weight: bold;
+      color: #333;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3; /* Ensure the text appears above the gradient */
+  }
+
+  .card-item-home::after {
+      height: 50%; /* Adjust the height for smaller screens */
+  }
+}
+
+.tradeheading{
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    margin-left: 18%;
+    font-size: 230%;
+    color: #ff7900;
+    text-align: center;
+    width: 54%;
+}
+@media (max-width: 600px) {
+    .tradeheading{
+
+    margin-top: 4%;
+    margin-left: 38%;
+    font-size: 124%;
+    color: #ff7900;
+    text-align: center;
+    width: 30%;
+
+    }
+
+}
+
+.containertrade {
+    display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 2%;
+  padding: 20px;
+  margin-left: -8%;
+  }
+  
+  .trade1 {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    max-width: 400px;
+    height: auto;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    padding: 4%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding-bottom: 8%;
+  }
+  
+  .trade1:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .trade1 img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    margin-bottom: 15px;
+    border-radius: 10px;
+  }
+  
+  .trade1:hover img {
+    opacity: 0.9;
+  }
+  
+  .trade1 .title {
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .trade1:hover .title {
+    color: #ff5733;
+  }
+  
+  .trade1 .details {
+    margin: 15px 0;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    text-align: justify;
+  }
+  
+  .trade1:hover .details {
+    color: #555;
+  }
+  
+  .trade1 .date,
+  .trade1 .location,
+  .trade1 .booth,.trade1 .tradelink
+   {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .trade1 .date span,
+  .trade1 .location span,
+  .trade1 .booth span ,
+  .trade1 .tradelink span{
+    color: #ff5733;
+    transition: color 0.3s ease;
+  }
+  
+  .trade1:hover .date span,
+  .trade1:hover .location span,
+  .trade1:hover .booth span,
+  .trade1:hover .tradelink span{
+    color: #e63946;
+  }
+  
+  @media (max-width: 600px) {
+    .trade1 {
+      width: 60%;
+      padding: 15px;
+      font-size: 1rem;
+      margin-left: 20%;
+    }
+  
+    
+    .trade1 .title {
+      font-size: 1.3em;
+    }
+  
+    .trade1 .details,
+    .trade1 .date,
+    .trade1 .location,
+    .trade1 .booth ,
+    .trade1 .tradelink{
+      font-size: 0.6rem;
+    }
+}
+
+
+
+.testimonials {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2% 0;
+  margin-left: 16%;
+}
+
+.testimonial {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding: 5%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  margin-bottom: 0px;
+  height: 330px;
+  flex-direction: row; /* Default direction for larger screens */
+}
+
+.testimonial-img {
+  width: 80%; 
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.testimonial-content {
+  flex-grow: 1;
+}
+
+.testimonial-content h3 {
+  font-size: 1.125em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-content p {
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.customer-name {
+  display: block;
+  font-size: 0.9em;
+  color: #080808;
+  margin-top: 6%;
+  margin-left: 61%;
+}
+
+.testimonialhead {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #ff5733;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+  .testimonials {
+    margin-left: auto;
+    padding: 5%;
+    width: 80%;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 510px;
+  }
+
+  .testimonials .testimonial .testimonial-img {
+    width: 50% !important; 
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+
+  .testimonial-content {
+    text-align: center;
+  }
+  .testimonial-content p {
+    font-size: 0.8em;
+    line-height: 1.2;
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+  .customer-name {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 816px) {
+  .testimonials {
+    margin-left: 3%;
+    padding: 5%;
+  }
+
+  /* .testimonial {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+  } */
+
+
+
+}
+
+
+
+
+
+
+
+

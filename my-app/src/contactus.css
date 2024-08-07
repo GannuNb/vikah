@@ -1,0 +1,515 @@
+.contacttopheading {
+    font-family: 'Arial, sans-serif';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #4CAF50, #2196F3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding: 2%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    margin-left: 26%;
+    margin-bottom: 5%;
+    max-width: 30%;
+    transition: all 0.3s ease;
+    border-color: #333333d2;
+    height: 12%;
+}
+
+.contacttopheading:hover {
+    color: #333;
+    background: linear-gradient(45deg, #2196F3, #4CAF50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+    .contacttopheading {
+        font-size: 1.2rem;
+        padding: 3%;
+        margin-top: 8%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        max-width: 80%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacttopheading {
+        font-size: 1rem;
+        padding: 4%;
+        margin-top: 30%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 3%;
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+
+
+.carosel {
+    position: relative;
+    margin-top: 6%;
+    margin-left: 14%;
+    border-radius: 1%;
+    width: 61%;
+    height: 49%;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 100%;  
+    height: 284px; 
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+.carousel .legend {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 0 0 4% 4%;
+    padding: 2%;
+    font-size: 1rem; /* Adjust font size as needed */
+    position: absolute; /* Use absolute positioning */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+    .carosel {
+        margin-top: 5%;
+    margin-left: 22%;
+    width: 52%;
+    height: 206px;
+    }
+    .carousel img {
+        width: 100%;  
+        height: 152px; 
+        object-fit: cover;
+        border-radius: 1%;
+    }
+    .carousel .legend {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carosel {
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 90%;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+  .contact-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12%;
+    margin-top: 12%;
+    margin-left: 9%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  .contact-card,.contact-cardnewzealand {
+    width: calc((83% - 60px) / 2); 
+    max-width: 100%;
+    height: auto;
+    border-radius: 4%;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    line-height: 1.6;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    margin-bottom: 12%;
+    width: 43%;
+  margin-left: -5%;
+  }
+  .contact-cardnewzealand{
+    margin-left: 24%;
+
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    border-color: transparent;
+    border-radius: 2%;
+  }
+  .contact-cardnewzealand:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+    border-color: transparent;
+    border-radius: 2%;
+  }
+  
+  .card-content {
+    width: 90%;
+  }
+  
+  .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .head-office {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    margin-bottom: 20px;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .company-logo {
+    width: 68px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+  
+  .logo-section:hover .company-logo {
+    transform: scale(1.1);
+  }
+  
+  .india {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .address-section {
+    margin-top: 20px;
+  }
+  
+  .address {
+    font-size: 14px;
+  }
+  
+  .card-footer {
+    width: 100%;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .contact-item {
+    font-family: var(--font-inter);
+  }
+  
+  .contact-item b {
+    white-space: nowrap;
+  }
+  
+  .contact-item span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .top-card {
+    position: relative;
+    width: 75%; /* Full width for the top card */
+    margin-right: 30px; 
+    margin-left: 44px;
+    margin-top: 0%;
+  }
+  
+  .top-card .card-content {
+    width: 100%;
+  }
+  
+  .top-card .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .top-card .head-office {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .top-card .card-body {
+    margin-bottom: 20px;
+  }
+  
+  .top-card .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .top-card .company-logo {
+    width: 68px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+  
+  .top-card .logo-section:hover .company-logo {
+    transform: scale(1.1);
+  }
+  
+  .top-card .india {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .top-card .address-section {
+    margin-top: 20px;
+  }
+  
+  .top-card .address {
+    font-size: 14px;
+  }
+  
+  .top-card .card-footer {
+    width: 100%;
+  }
+  
+  .top-card .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .top-card .contact-item {
+    font-family: var(--font-inter);
+  }
+  
+  .top-card .contact-item b {
+    white-space: nowrap;
+  }
+  
+  .top-card .contact-item span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .additional-info {
+    position: relative;
+    width: 96%;
+    padding: 1%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 1%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 94%;
+    margin-bottom: 5%;
+    text-align: center;
+    line-height: 1.6;
+    margin-left: 0px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.644);
+    margin-top: 1%;
+    margin-left:-5% ;
+  }
+  
+  
+  .additional-info:hover {
+    background-color: #fff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .additional-info a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  
+  .additional-info a:hover {
+    color: #0056b3;
+  }
+  
+  .additional-info b {
+    font-weight: bold;
+    color: #333;
+  }
+  
+
+  @media (max-width: 480px) {
+.contact-card {
+    position: relative;
+    width: 100%;
+    height: 14%;
+    left: 10%;
+
+
+}
+.contact-cardnewzealand{
+
+  position: relative;
+  width: 100%;
+  height: 14%;
+  margin-left: 10%;
+
+}
+.card-content{
+    width: 120%;
+}
+.top-card{
+    width: 96%;
+    margin-left: 0%;
+  }
+  .additional-info{
+   
+    margin-left: 5%;
+    margin-top: 12%;
+    width: 100%;
+    margin-bottom: 10%;
+
+  }
+
+
+
+  }
+
+
+
+
+  
+  .socialcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0%;
+    align-items: flex-start;
+    margin-top: 4%;
+    padding: 3%;
+    background-color: white;
+ 
+    margin-left: 1%;
+  margin-right: 8%;
+}
+
+.socialcontainer a {
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.socialcard {
+    display: flex;
+    flex-direction: column;
+    width: calc(80.33% - 2%);
+    min-height: 350px; 
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1%; 
+}
+
+.socialcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.socialheader {
+    padding: 2%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0d9cd4;
+    border-bottom: 1px solid #ddd;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialheader:hover {
+    color: #007bff; 
+    transform: scale(1.0); 
+}
+
+.socialcontent{
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.socialcontent img,
+.card-content iframe {
+    width: 100%;
+    height: 65%;
+    object-fit: cover; 
+    border: none; 
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .socialcard {
+      width: calc(100% - 2%);
+  }
+}
+
+@media (max-width: 768px) {
+  .socialcard {
+      width: calc(95% - 2%); 
+      margin: 1% 0; 
+      margin-left: 6%;
+      margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .socialheader {
+      font-size: 1.2rem; }
+  .socialcontent img ,
+  .card-content iframe {
+      height: 60%; 
+  }
+}

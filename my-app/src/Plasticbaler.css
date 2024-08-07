@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-plastic {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 70%;
+    height: auto;
+    margin-left: 8%;
+    margin-right: 18%;
+    margin-top: 10%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-plastic:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-plastic-body {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-plastic-title {
+    font-size: 175%;
+    color: #333;
+}
+
+.card-plastic-text {
+    font-size: 88%;
+    color: black;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-plastic-contact {
+    margin-top: 8%;
+    padding: 5%;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    font-size: 100%;
+    color: rgba(0, 0, 255, 0.918);
+}
+
+.card-plastic-contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card-plastic-contact a:hover {
+    text-decoration: underline;
+}
+
+.plasticimg-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 10%; /* Adjust padding for aspect ratio */
+}
+
+.plasticimg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.plasticimg:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .card-plastic {
+        width: 80%;
+        margin-top: 5%;
+    }
+    .card-plastic-text{
+        font-size: 90%;
+    }
+
+    
+
+   
+
+   
+}
