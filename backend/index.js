@@ -1,17 +1,16 @@
-require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+require('dotenv').config();
 
 const app = express();
-const port = 5000;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'http://localhost:3000'  // Update this to your frontend URL after deployment
 }));
 
 // Email configuration
@@ -25,7 +24,7 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send-email', (req, res) => {
   const { name, company, machinery, model, email, website, phone, address, city, country, message } = req.body;
-
+  
   const pdfPath = path.join(__dirname, 'pdfs', `${model}.pdf`);
 
   const userMailOptions = {
@@ -89,6 +88,5 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on the port ${port}`);
-});
+// Export the app for Vercel
+module.exports = app;
