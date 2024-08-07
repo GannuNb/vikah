@@ -1,19 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/send-email",
-        "dest": "/server.js"
-      }
-    ],
-    "env": {
-      "EMAIL_USER": "r180685@rguktrkv.ac.in",
-      "EMAIL_PASS": "jeevitha43210"
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ]
+}
