@@ -10,7 +10,7 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'http://localhost:3000'  // Update this to your frontend URL after deployment
+  origin: 'https://vikahecotech.vercel.app/'  // Update this to your frontend URL after deployment
 }));
 
 // Email configuration
