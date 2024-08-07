@@ -62,7 +62,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://vikahecotech.com:65002/send-email', {
+      const response = await axios.post('https://vikah.vercel.app/send-email', {
         ...formData,
         machinery: selectedMachinery,
         model: selectedModel
