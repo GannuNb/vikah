@@ -9,8 +9,16 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
+const allowedOrigins = ['https://vikahecotech.vercel.app'];
+
 app.use(cors({
-  origin: 'https://vikahecotech.vercel.app/'  // Update this to your frontend URL after deployment
+  origin: function(origin, callback){
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
 
 // Email configuration
