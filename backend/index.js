@@ -87,6 +87,9 @@ app.post('/send-email', (req, res) => {
     });
   });
 });
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
 //hello gannu
 // Export the app for Vercel app
