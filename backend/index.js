@@ -88,5 +88,5 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-// Export the app for Vercel
+// Export the app for Vercel app
 module.exports = app;
