@@ -11,18 +11,11 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 
-const allowedOrigins = ['https://www.vikahecotech.com'];
+// Allow CORS for everyone
+app.use(cors());
 
-app.use(cors({
-  origin: function (origin, callback) {
-    console.log('Origin:', origin);
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}));
+// Handle preflight requests
+app.options('*', cors()); 
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -103,13 +96,13 @@ app.post('/send-email', (req, res) => {
 
       console.log('User email sent:', userMailInfo.response);
       console.log('Admin email sent:', adminMailInfo.response);
-      res.status(200).send('Thanks for sending enquiry one of our executive get back to you');
+      res.status(200).send('Thanks for sending enquiry. One of our executives will get back to you');
     });
   });
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello vikah!');
+  res.send('Hello Vikah!');
 });
 
 // Export the app for Vercel
