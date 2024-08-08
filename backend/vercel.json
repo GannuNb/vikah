@@ -1,16 +1,14 @@
 {
   "version": 2,
   "functions": {
-    "api/index.js": {
+    "backend/index.js": {
       "includeFiles": "pdfs/**"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "api/index.js"
+      "dest": "backend/index.js"
     }
   ]
 }
-
-
