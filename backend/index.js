@@ -7,7 +7,6 @@ const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
-console.log("hlo")
 
 // Middleware
 app.use(bodyParser.json());
@@ -41,14 +40,12 @@ console.log('Email Pass:', process.env.EMAIL_PASS ? 'Loaded' : 'Not Loaded');
 app.post('/send-email', (req, res) => {
   const { name, company, machinery, model, email, website, phone, address, city, country, message } = req.body;
 
-  // Construct the path to the PDF file
-  const pdfPath = path.join(__dirname, 'backend', 'pdfs', `${model}.pdf`);
-
-  // Log the full path for debugging
+  const pdfPath = path.join(__dirname, 'pdfs', `${model}.pdf`);
   console.log('PDF Path:', pdfPath);
 
   // Check if the PDF file exists
   if (!fs.existsSync(pdfPath)) {
+    console.error('File not found:', pdfPath);
     return res.status(400).send('PDF file does not exist for the selected model');
   }
 
@@ -114,7 +111,7 @@ app.post('/send-email', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello WorlD!');
+  res.send('Hello World!');
 });
 
 // Export the app for Vercel
