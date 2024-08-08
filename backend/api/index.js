@@ -40,7 +40,7 @@ console.log('Email Pass:', process.env.EMAIL_PASS ? 'Loaded' : 'Not Loaded');
 app.post('/send-email', (req, res) => {
   const { name, company, machinery, model, email, website, phone, address, city, country, message } = req.body;
 
-  const pdfPath = path.join(__dirname, '../pdfs', `${model}.pdf`);
+  const pdfPath = path.join(__dirname, 'pdfs', `${model}.pdf`);
   console.log('PDF Path:', pdfPath);
 
   // Check if the PDF file exists
