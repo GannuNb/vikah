@@ -7,6 +7,7 @@ const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
+console.log("hlo")
 
 // Middleware
 app.use(bodyParser.json());
