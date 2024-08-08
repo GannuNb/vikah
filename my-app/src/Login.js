@@ -59,19 +59,32 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.post('https://vikah.vercel.app/send-email', {
-        ...formData,
-        machinery: selectedMachinery,
-        model: selectedModel
-      });
-      alert('Thanks for sending enquiry one of our executive get back to you: ' + response.data);
-    } catch (error) {
-      alert('Failed to send email: ' + error.message);
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  try {
+    const response = await axios.post('https://vikah.vercel.app/send-email', {
+      ...formData,
+      machinery: selectedMachinery,
+      model: selectedModel
+    });
+    alert('Thanks for sending enquiry. One of our executives will get back to you: ' + response.data);
+  } catch (error) {
+    if (error.response) {
+      // Server responded with a status code out of the range of 2xx
+      console.error('Server Error:', error.response.data);
+      alert('Failed to send email: ' + error.response.data);
+    } else if (error.request) {
+      // Request was made but no response was received
+      console.error('Network Error:', error.request);
+      alert('Network error occurred. Please try again.');
+    } else {
+      // Something else happened
+      console.error('Error:', error.message);
+      alert('Error: ' + error.message);
     }
-  };
+  }
+};
+
   
 
   return (
