@@ -34,6 +34,10 @@ app.post('/send-email', (req, res) => {
   const { name, company, machinery, model, email, website, phone, address, city, country, message } = req.body;
   
   const pdfPath = path.join(__dirname, 'pdfs', `${model}.pdf`);
+   if (!fs.existsSync(pdfPath)) {
+    return res.status(400).send('PDF file does not exist for the selected model');
+  }
+
 
   const userMailOptions = {
     from: process.env.EMAIL_USER,
