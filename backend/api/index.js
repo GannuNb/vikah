@@ -11,7 +11,7 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 
-const allowedOrigins = ['https://vikahecotech.vercel.app'];
+const allowedOrigins = ['https://www.vikahecotech.com'];
 
 app.use(cors({
   origin: function (origin, callback) {
