@@ -3,16 +3,19 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
+
 const allowedOrigins = ['https://vikahecotech.vercel.app'];
 
 app.use(cors({
-  origin: function(origin, callback){
+  origin: function (origin, callback) {
+    console.log('Origin:', origin);
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -30,14 +33,19 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Log environment variables for debugging
+console.log('Email User:', process.env.EMAIL_USER);
+console.log('Email Pass:', process.env.EMAIL_PASS ? 'Loaded' : 'Not Loaded');
+
 app.post('/send-email', (req, res) => {
   const { name, company, machinery, model, email, website, phone, address, city, country, message } = req.body;
-  
+
   const pdfPath = path.join(__dirname, 'pdfs', `${model}.pdf`);
-   if (!fs.existsSync(pdfPath)) {
+
+  // Check if the PDF file exists
+  if (!fs.existsSync(pdfPath)) {
     return res.status(400).send('PDF file does not exist for the selected model');
   }
-
 
   const userMailOptions = {
     from: process.env.EMAIL_USER,
@@ -61,7 +69,7 @@ app.post('/send-email', (req, res) => {
 
   const adminMailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'nbyaswanth1818@gmail.com', 
+    to: 'nbyaswanth1818@gmail.com',
     subject: `New Enquiry for model ${model}`,
     html: `
       <div style="text-align: justify;">
@@ -86,23 +94,23 @@ app.post('/send-email', (req, res) => {
       console.error('Error sending user email:', error);
       return res.status(500).send('Error sending user email: ' + error.toString());
     }
-    
+
     transporter.sendMail(adminMailOptions, (error, adminMailInfo) => {
       if (error) {
         console.error('Error sending admin email:', error);
         return res.status(500).send('Error sending admin email: ' + error.toString());
       }
-      
+
       console.log('User email sent:', userMailInfo.response);
       console.log('Admin email sent:', adminMailInfo.response);
       res.status(200).send('Thanks for sending enquiry one of our executive get back to you');
     });
   });
 });
+
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+  res.send('Hello World!');
 });
 
-//hello gannu
-// Export the app for Vercel app
+// Export the app for Vercel
 module.exports = app;
