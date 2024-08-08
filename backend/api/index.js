@@ -53,7 +53,7 @@ app.post('/send-email', (req, res) => {
     subject: `Details from Vikah Ecotech for Model No ${model}`,
     html: `
       <div style="text-align: justify;">
-        <p><strong>Thanks for showing your interest in our machinery and services.</strong></p>
+        <p><strong>Please find the specs for the model.</strong></p>
         <p>We consider you as our utmost priority and will get back to you as soon as possible.</p>
         <p>Please find the model details:</p>
         <p><strong>Model: ${model}</strong> (attachment included)</p>
