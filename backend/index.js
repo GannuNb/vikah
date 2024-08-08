@@ -109,7 +109,7 @@ app.post('/send-email', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello WorlD!');
 });
 
 // Export the app for Vercel
